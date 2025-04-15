@@ -40,7 +40,7 @@ Where:
 
 Note: If the --size or --thread options are not provided:
 
-The default size is 1000.
+The default size is 1000000.
 
 The default thread count is automatically determined by the system's hardware using:
 ```
