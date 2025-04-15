@@ -114,12 +114,12 @@ int multi_thread_sum_reduce(const std::vector<int>& arr, size_t num_threads) {
 
 std::pair<int, int> parse_args(int argc, char** argv) {
     zen::cmd_args args(argv, argc);
-    if (!args.is_present("--size") || !args.is_present("--thread")) {
+    if (!args.is_present("--size") || !args.is_present("--threads")) {
         zen::log(zen::color::yellow("Warning: "), "Missing required arguments. Using default values.");
         return {1'000'000, std::thread::hardware_concurrency()};
     }
     int size = std::stoi(args.get_options("--size")[0]);
-    int threads = std::stoi(args.get_options("--thread")[0]);
+    int threads = std::stoi(args.get_options("--threads")[0]);
     return {size, threads};
 }
 
