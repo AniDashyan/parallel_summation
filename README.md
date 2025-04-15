@@ -47,7 +47,6 @@ The default thread count is automatically determined by the system's hardware us
 std::thread::hardware_concurrency()
 ```
 This returns the number of concurrent threads the hardware can support (typically equal to the number of logical CPU cores). This allows the program to scale automatically with the system's available processing resources.
----
 
 ## Example Output
 
